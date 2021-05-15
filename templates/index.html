@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>BIG DATA</title>
+  </head>
+  <body >
+    <header>
+      <h1 class="text-center" style="margin-bottom: 50px">DATOS DE CRYPTOS</h1>
+    </header>
+    <main >
+      <section >
+
+              <div class="dataframe">
+                <h4 >CRYPTO CON MAS POPULARIDAD</h4>
+                {{ fans_by_housemate_df | safe }}
+                <a href="#fbh_bc">VER GARFICO</a>
+              </div>
+
+
+              <div class="dataframe">
+                <h4>
+                  PROMEDIO DE SEGUIDORES DE LOS USUSARIOS QUE COMENTAN ACERCA DE
+                  UNA CRYPTO
+                </h4>
+                {{ followers_of_fans_by_hm_df | safe }}
+                <a href="#fbh_bc">VER GARFICO</a>
+              </div>
+
+
+          <div class="dataframe">
+            <h2>POPULARIDAD POR NACIONALIDAD</h2>
+            {{ fans_by_location_df | safe }}
+          </div>
+          <a href="#fbl_bc">VER GARFICO</a>
+        </section>
+
+        <section class="charts">
+          <div class="chart" id="fbh_bc">
+            <h2>GRAFICO DE BARRA DE LOS FANATICOS A LAS CRYPTOS</h2>
+            <img src="/fans_by_hm_bar_chart/" alt="Fans By item Bar Chart" />
+          </div>
+          <div class="chart" id="fbl_bc">
+            <h2>GRAFICO DE BARRA DE FANATICOS A LAS CRYPTO POR NACIONALIDAD</h2>
+            <img
+            src="/fans_by_location_bar_chart/"
+            alt="Fans of Housemates by Location Bar Chart"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
